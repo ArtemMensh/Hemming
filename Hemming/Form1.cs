@@ -55,24 +55,24 @@ namespace Hemming
                 MessageBoxOptions.DefaultDesktopOnly);
             }
             // если ошибка не в контрольных битах
-            // else if (sum - 1 != 0 && sum - 1 != 1 && sum - 1 != 3 && sum - 1 != 7 && sum - 1 != 15)
-            // {
-            //     array_wrong[sum - 1] = invers(array_wrong[sum - 1]);
+            else if (sum - 1 != 0 && sum - 1 != 1 && sum - 1 != 3 && sum - 1 != 7 && sum - 1 != 15)
+            {
+                array_wrong[sum - 1] = invers(array_wrong[sum - 1]);
 
-            //     s = "";
-            //     foreach (int i in array_wrong)
-            //     {
-            //         s += i.ToString();
-            //     }
+                s = "";
+                foreach (int i in array_wrong)
+                {
+                    s += i.ToString();
+                }
 
-            //     MessageBox.Show(
-            //     "Правильный вариант " + s + "\n" + "Раскодированная последовательность бит " + rith(array_wrong),
-            //     "Ошибка сожержиться в " + sum + " бите",
-            //     MessageBoxButtons.OK,
-            //     MessageBoxIcon.Information,
-            //     MessageBoxDefaultButton.Button1,
-            //     MessageBoxOptions.DefaultDesktopOnly);
-            // }
+                MessageBox.Show(
+                "Правильный вариант " + s + "\n" + "Раскодированная последовательность бит " + rith(array_wrong),
+                "Ошибка сожержиться в " + sum + " бите",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+            }
             else
             // если ошибка в контрольных битах
             {
